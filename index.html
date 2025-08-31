@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorSlide Gallery - Modern Image Slider</title>
+    <meta name="description" content="Beautiful multi-color image slider gallery with smooth transitions and modern design">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <span>ColorSlide</span>
+            </div>
+            <nav class="nav">
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Experience Visual
+                <span class="gradient-text">Storytelling</span>
+            </h1>
+            <p class="hero-subtitle">
+                Navigate through stunning imagery with our modern, interactive gallery slider
+            </p>
+            <button class="cta-button" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">
+                <i class="fas fa-play"></i>
+                Start Gallery
+            </button>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Main Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Gallery</h2>
+                <p class="section-subtitle">Navigate through our curated collection of stunning visuals</p>
+            </div>
+
+            <!-- Image Slider -->
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="image-slider" id="imageSlider">
+                        <!-- Images will be dynamically loaded here -->
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button class="nav-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Slide Counter -->
+                    <div class="slide-counter">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">0</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Navigation -->
+                <div class="thumbnail-container" id="thumbnailContainer">
+                    <!-- Thumbnails will be dynamically loaded here -->
+                </div>
+
+                <!-- Slide Indicators -->
+                <div class="slide-indicators" id="slideIndicators">
+                    <!-- Indicators will be dynamically loaded here -->
+                </div>
+            </div>
+
+            <!-- Gallery Controls -->
+            <div class="gallery-controls">
+                <button class="control-btn" id="playPauseBtn">
+                    <i class="fas fa-play"></i>
+                    <span>Auto Play</span>
+                </button>
+                <button class="control-btn" id="fullscreenBtn">
+                    <i class="fas fa-expand"></i>
+                    <span>Fullscreen</span>
+                </button>
+                <button class="control-btn" id="shuffleBtn">
+                    <i class="fas fa-random"></i>
+                    <span>Shuffle</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gallery Features</h2>
+                <p class="section-subtitle">Discover what makes our slider special</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3>Interactive Navigation</h3>
+                    <p>Navigate with buttons, thumbnails, or keyboard arrows for seamless browsing</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Fully Responsive</h3>
+                    <p>Perfect viewing experience across all devices and screen sizes</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Multi-Color Design</h3>
+                    <p>Vibrant color scheme with smooth transitions and modern aesthetics</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Auto Play Mode</h3>
+                    <p>Automatic slideshow with customizable timing and pause on hover</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About ColorSlide</h2>
+                    <p class="about-description">
+                        ColorSlide is a modern, interactive image gallery built with cutting-edge web technologies. 
+                        Our slider combines beautiful design with powerful functionality, offering users an 
+                        immersive visual experience.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-code"></i>
+                            <span>Built with ES6 JavaScript</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Modern CSS3 Animations</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Optimized Performance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-camera-retro"></i>
+                        <span>ColorSlide</span>
+                    </div>
+                    <p>Creating beautiful visual experiences with modern web technology.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ColorSlide Gallery. Made with <i class="fas fa-heart"></i> for visual storytelling.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
